@@ -8,10 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="imagens/logo.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/primary.scss">
+     <link rel="stylesheet" href="css/style.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>PASDFE - Inicio</title>
 </head>
+  
 <body>
     <!--========== HEADER ==========-->
     <header>
@@ -20,19 +23,20 @@
 
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link active-link"><strong>INTRODUÇÃO</strong></a></li>
-                <li class="nav__item"><a href="#about" class="nav__link"><strong> DOAÇÃO </strong></a></li>
-                <li class="nav__item"><a href="#services" class="nav__link"><strong> ONGs </strong></a></li>
-                <li class="nav__item"><a href="#menu" class="nav__link"><strong> SUPORTE </strong></a></li>
+                <li class="nav__item"><a href="#int" class="nav__link active-link"><strong>INTRODUÇÃO</strong></a></li>
+                <li class="nav__item"><a href="#about" class="nav__link"><strong> ONGs </strong></a></li>
+                <li class="nav__item"><a href="#service" class="nav__link"><strong> DOAÇÃO </strong></a></li>
+                <li class="nav__item"><a href="#footer" class="nav__link"><strong> SUPORTE </strong></a></li>
                 <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
             </ul>
        </nav>
     </header>
+   
      <main>
         <!--========== INICIO ==========-->
-        <section id="inicio">
+        <section id="home">
             <div class="home">
-        <div class="home__data">
+        <div id="inicio" class="home__data">
             <h1 class="home_title">
                 <strong>
                P.A.S.D.F.E<hr class="line">
@@ -54,31 +58,42 @@
         <div class="img-city">
             <img class="city" src="imagens/city.jpeg" alt="">
         </div>
+         <div class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
     </div>
     </section>
 
+    
+
     <!--========== DOAÇÃO ==========-->
-    <section id="doação">
+    <section id="int">
        <div class="doação">
         <h1></h1>
         <img class="doação_img-men" src="imagens/mendigo.jpeg" alt="">
             <h1 class="doação_title"><strong>Uma <span class="doação_city-color">esperança </span>para a <span class="doação_city-color">patria</span> </strong> <br> <br>
-           <p class="doação-p">Dados divulgados pela Codeplan em junho deste ano relatam um fato que já era notado que <br>
-            desde o agravamento da pandemia, o número de pessoas que está morando nas ruas está maior.<br>
-            Cerca de 2.938 pessoas em 2022 estão morando nas ruas de Brasília. <br>
-            O número representa um crescimento de 49,97% durante a pandemia.</p>
+           <p class="doação-p">Dados divulgados no começo do ano relatam um fato que já era notado desde o agravamento da pandemia, <br>
+            em meados de 2020, o número de pessoas que está indo morar nas ruas está maior. <br>
+            os dados são alarmantes, cerca de 32 mil pessoas estão morando nas ruas da capital paulista, <br>
+            segundo pesquisa da prefeitura feita no início de janeiro. <br>
+            O número representa um crescimento de 31% durante a pandemia. <br>
+             Já na capital fluminense, o aumento foi de 20%, com cerca de 7.500 pessoas vivendo nas ruas.</p>
             <h2 class="doação-title2">Aumento de moradores de rua antes e depois da <span class="doação_city-color">pandemia</span> </h2>
             <br>
-            <li class="list"><h2 class="doação_ano">1.959 em 201<span class="doação_city-color">9</span> </h2></li>
-            <li class="list"><h2 class="doação_ano">2.938 em 202<span class="doação_city-color">2</span> </h2></li></ul>  
+            <ul> <li class="list"> <h2 class="doação_ano">14Mil em 201<span class="doação_city-color">5</span> </h2></li>
+            <li class="list"><h2 class="doação_ano">16Mil em 201<span class="doação_city-color">9</span> </h2></li>
+            <li class="list"><h2 class="doação_ano">31Mil em 202<span class="doação_city-color">1</span> </h2></li></ul>  
             <br><br>
-            </div> 
-        
-       </div>
+           <div id="grafico"></div>
+        </div> 
+       
+       
     </section>
 
     <!--========== ONGs ==========-->
-    <section id="ongs">
+    <section id="about"> <br> <br>
         <div class="container">
             <div class="card">
                     <img class="img-card" src="./imagens/osc.jpeg" alt="Foto 01">
@@ -90,17 +105,57 @@
             <div class="card">
                 <img class="img-card" src="./imagens/ABCD.jpeg" alt="Foto 01">
                 <div class="intro">
-                <h1 class="card-h1">Barbanarua</h1>
-                <p class="card-p"> Barbanarua <br> localizada: Brasilia-DF <br> contato: (61) 983638161 </p> 
+                <h1 class="card-h1">ABCD</h1>
+                <p class="card-p"> ABCD <br> localizada: São Paulo-SP <br> contato: (11) 4563-0608 </p> 
+                </div>
+            </div>
+            <div class="card">
+                <img class="img-card" src="./imagens/risu.jpeg" alt="Foto 01">
+                <div class="intro">
+                <h1 class="card-h1">risu</h1>
+                <p class="card-p"> risu <br> localizada: Anchieta, Belo Horizonte - MG <br> contato: https://risu.com.br/ongs</p>
                 </div>
             </div>
         </div>
                 
     </section>
+        
+    <!--========== DOAÇÃO ==========-->
+    <section id="service" >
+        
+
+<div class="container">
+  
+    <div class="warpper">
+        <input class="radio" id="one" name="group" type="radio" checked>
+        <input class="radio" id="two" name="group" type="radio">
+        <input class="radio" id="three" name="group" type="radio">
+        <div class="tabs">
+        <label class="tab" id="one-tab" for="one"><strong>Doação</strong> </label>
+        <label class="tab" id="two-tab" for="two">Depoimentos</label>
+          </div>
+        <div class="panels">
+        <div class="panel" id="one-panel">
+          <div class="panel-title">Doe usando cartão de crédito ou boleto</div> <br>
+           <input class="botton-doar" type="button" value="DOE AGORA">  <br><br> <br>
+           <h2>Doe com PIX:</h2> 
+           <h3> veltonlopesdealmeida78@gmail.com / 092.197.311-00</h3> <br>
+          <input class="botton-doar" type="button" value="DOE DE FORMA GRATUITA ">  <br><br><br> <br>
+          <h3> <span class="aspas-tab">"</span>ajude centenas de vidas com um click<span class="aspas-tab">"</span> </h3> 
+        </div>
+        <div class="panel" id="two-panel">
+          <div class="panel-title">Alguns depoimentos</div> <br>
+          <p>You will learn many aspects of styling web pages! You’ll be able to set up the correct file structure, edit text and colors, and create attractive layouts. With these skills, you’ll be able to customize the appearance of your web pages to suit your every need!</p>
+        </div>
+        </div>
+      </div>
+  
+    </section>
+
      </main>
 
-     <!--========== ONGs ==========-->
-     <footer class="footer">
+     <!--========== FOOTER ==========-->
+     <footer class="footer" id="footer">
         <h2 class="contato">Contato</h2> <hr class="line-contato">
         <h1 class="frase">Aos nossos olhos, eles não são <br> invisíveis.</h1> <br>
         <h3 class="criadores">Criadores do projeto</h3> 
@@ -123,11 +178,14 @@
                 </fieldset>
             </form>
             </div>
-        
+         
      </footer>
-   
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+       <!--JAVASCRIPT-->
   
+  <button class="top-btn" ><a class="top-a" href="#home"><strong> ↑ <br> SUBIR <br></strong></a> </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
