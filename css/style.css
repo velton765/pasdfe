@@ -10,7 +10,6 @@ html{
 
 body{
     font-family: 'Didact Gothic', sans-serif;
-    max-width: 1700px;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -23,15 +22,31 @@ h1,h2,h3,p,ul{
   }
 
   .nav{
-    max-width: 1624px;
-    width: 2900px;
+    transform: translateX(0);
+    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.950);
-  }  
+  } 
+  
+  .pix{
+    position: relative;
+    top: 15px;
+  }
+
+  .pix-number{
+    position: relative;
+    left: 35px;
+    top: -25px;
+  }
+
+  .pix-svg{
+    width: 20px;
+  }
 
 .pal-green{
     color: rgb(32, 72, 19);
@@ -63,12 +78,16 @@ h1,h2,h3,p,ul{
 .home_title{
     font-size: 60px;
     margin-bottom: 20px;
+    width: 500px;
+    left: 1000px;
+    top: 200px;
+    position: relative;
 }
 
 .line{
     width: 120px;
     height: 5px;
-    left: -530px;
+    left: -0px;
     top: -0px;
     position: relative;
     border-radius: 5px;
@@ -129,10 +148,11 @@ h1,h2,h3,p,ul{
 .home_sub-title{
     font-size: 30px;
     margin-bottom: 20px;
+    width: 600px;
 }
 
-.home_sub-title, .home_title{
-    left:950px;
+.home_sub-title{
+    left:500px;
     top: 200px;
     position: relative;
 }
@@ -156,10 +176,6 @@ h1,h2,h3,p,ul{
     top: -40px;
 }
 
-#chart {
-    max-width: 650px;
-    margin: 35px auto;
-  }  
 
 .border-down{
     box-shadow: 7px 7px 7px rgba(32, 72, 19, 0.411);
@@ -172,10 +188,9 @@ h1,h2,h3,p,ul{
 }
 
 .doação{
-    background: url(imagens/mendigo.jpeg);
     background-color: rgb(32, 72, 19);
     top: -100px;
-    padding: 50px;
+    padding: 20px;
     position: relative;
     width: 1600px;
 }
@@ -193,23 +208,33 @@ h1,h2,h3,p,ul{
     position: relative;
     font-size: 30px;
     top: -170px;
+    width: 850px;
 }
 
 .doação-title2{
     color: whitesmoke;
+    position: relative;
 }
 
 .doação_ano {
+    position: relative;
     color: whitesmoke;
     float: left;
     margin-left: 10px;
     padding-left: 50px;
 }
 
-.list{
-    list-style: none;
+#tester{
+ position: relative;
+ left: 255px;
+ top: -100px;
 }
 
+.list{
+    position: relative;
+    list-style: none;
+}
+ 
 .doação_city-color{
     color: #F9AE3D;
 }
@@ -231,12 +256,13 @@ h1,h2,h3,p,ul{
 }
 
 .intro{
-    top: 2070px;
+    top: 2370px;
     height: 100px;
     width: 300px;
     padding: 6px;
     box-sizing: border-box;
     position: absolute;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
     background: rgba(32, 72, 19, 0.9);
     color: whitesmoke;
     bottom: 230px;
@@ -368,7 +394,7 @@ h1,h2,h3,p,ul{
     bottom: 0;
     width: 100%;
     height: 600px;
-    top: 185rem;
+    top: 210rem;
   }
 
   footer {
@@ -380,12 +406,14 @@ h1,h2,h3,p,ul{
   .contato{
     top: 80px;
     left: 120px;
+    width: 200px;
     position: relative;
   }
 
   .frase{
     left: 50px;
     top: 120px;
+    width: 500px;
     position: relative;
   }
 
@@ -404,6 +432,7 @@ h1,h2,h3,p,ul{
     position: relative;
     top: 170px;
     left: 30px;
+    width: 200px;
   }
 
   .formulario{
@@ -476,10 +505,112 @@ h1,h2,h3,p,ul{
     text-decoration: none;
 }
   
-  @media (max-width: 450px) {
-    .swiper {
-      height: 270px;
+  @media screen and (max-width: 750px ) {
+    .home{
+      width: 100%;
     }
+    .city{
+      width: 200px;
+      height: 200px;
+      left: 40%;
+      top: -250px;
+    }
+
+    .border-down{
+      width: 100px;
+      height: 100px;
+      left: -100px;
+      top: 0px;
+    }
+
+    .border-on-top{
+      width: 100px;
+      height: 100px;
+      left: 60px;
+      top: -100px;
+    }
+
+    .nav{
+      display: none;
+    }
+
+    .home_title{
+    font-size: 35px;
+    top: 400px;
+    left: 455px;
+    }
+
+    .line{
+      width: 60px;
+      left: -150px;
+    }
+
+    .home_sub-title{
+      width: 350px;
+      font-size: 20px;
+      top: 420px;
+      left: 30px;
+    }
+
+    .doação{
+      top: 100px;
+      width: 750px;
+      height: 750px;
+    }
+
+    .doação_title{
+      font-size: 25px;
+      left: 190px;
+      top: 50px;
+    }
+
+    .doação-title2{
+      width: 280px;
+      font-size: 19px;
+      top: 100px;
+      left: 190px;
+    }
+
+    .list{
+      font-size: 11px;
+      left: 160px;
+      top: 130px;
+    }
+
+    .doação_ano{
+      margin-left: 5px;
+     padding-left: 10px;
+    }
+
+    .doação_img-men{
+      width: 100px;
+      height: 100px;
+    }
+
+    .doação-p{
+      width: 300px;
+      font-size: 15px;
+      left: -500px;
+      top: 55px;
+    }
+
+    #tester{
+      display: none;
+    }
+
+    .card{
+      margin: 5px;
+      left: 200px;
+      top: 120px;
+    }
+
+    .img-card{
+      width: 100px;
+      height: 80px;
+      left: 50px;
+    }
+
+
   }
 
   
