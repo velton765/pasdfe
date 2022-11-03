@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="imagens/logo.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="css/primary.scss">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
      <link rel="stylesheet" href="css/style.css">
     
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
@@ -20,9 +21,25 @@
     <header>
        <nav class="nav">
         <a href="#"><img class="nav__logo" src="imagens/logo.jpeg" alt=""></a>
-
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
+     
+            <div class="pix">  
+                <svg class="pix-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License -
+                         https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                         <path d="M242.4 292.5C247.8 287.1 257.1 287.1 262.5 292.5L339.5 369.5C353.7
+                          383.7 372.6 391.5 392.6 391.5H407.7L310.6 488.6C280.3 518.1 231.1 518.1 200.8 
+                          488.6L103.3 391.2H112.6C132.6 391.2 151.5 383.4 165.7 369.2L242.4 292.5zM262.5 218.9C256.1
+                           224.4 247.9 224.5 242.4 218.9L165.7 142.2C151.5 127.1 132.6 120.2 112.6 120.2H103.3L200.7
+                            22.76C231.1-7.586 280.3-7.586 310.6 22.76L407.8 119.9H392.6C372.6 119.9 353.7 127.7 339.5 
+                            141.9L262.5 218.9zM112.6 142.7C126.4 142.7 139.1 148.3 149.7 158.1L226.4 234.8C233.6 241.1 
+                            243 245.6 252.5 245.6C261.9 245.6 271.3 241.1 278.5 234.8L355.5 157.8C365.3 148.1 378.8 142.5
+                             392.6 142.5H430.3L488.6 200.8C518.9 231.1 518.9 280.3 488.6 310.6L430.3 368.9H392.6C378.8 368.9 
+                             365.3 363.3 355.5 353.5L278.5 276.5C264.6 262.6 240.3 262.6 226.4 276.6L149.7 353.2C139.1 363 
+                             126.4 368.6 112.6 368.6H80.78L22.76 310.6C-7.586 280.3-7.586 
+                    231.1 22.76 200.8L80.78 142.7H112.6z"/></svg> 
+                     <p class="pix-number"><strong>092.197.311-00</strong> </p></div>
+                    <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list"> 
                 <li class="nav__item"><a href="#int" class="nav__link active-link"><strong>INTRODUÇÃO</strong></a></li>
                 <li class="nav__item"><a href="#about" class="nav__link"><strong> ONGs </strong></a></li>
                 <li class="nav__item"><a href="#service" class="nav__link"><strong> DOAÇÃO </strong></a></li>
@@ -85,8 +102,9 @@
             <ul> <li class="list"> <h2 class="doação_ano">14Mil em 201<span class="doação_city-color">5</span> </h2></li>
             <li class="list"><h2 class="doação_ano">16Mil em 201<span class="doação_city-color">9</span> </h2></li>
             <li class="list"><h2 class="doação_ano">31Mil em 202<span class="doação_city-color">1</span> </h2></li></ul>  
+              <div id="tester" style="height:300px;width:570px;"></div>
             <br><br>
-           <div id="grafico"></div>
+            </div>
         </div> 
        
        
@@ -184,8 +202,28 @@
        <!--JAVASCRIPT-->
   
   <button class="top-btn" ><a class="top-a" href="#home"><strong> ↑ <br> SUBIR <br></strong></a> </button>
-
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+ 
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+<script>
+    
+
+TESTER = document.getElementById('tester');
+
+Plotly.plot( TESTER, [{
+  x: [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+  
+  y: [14.000, 14.000, 14.000, 14.000, 16.000, 16.000, 31.000]}], { 
+  margin: { t: 0 } }, {showSendToCloud:true} );
+/* Current Plotly.js version */
+console.log( Plotly.BUILD );
+
+
+</script> 
+
+  
 </body>
 </html>
